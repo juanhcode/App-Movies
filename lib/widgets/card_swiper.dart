@@ -8,7 +8,7 @@ class CardSwiper extends StatelessWidget {
   Widget build(BuildContext context) {
     //para manipular el tamaño de la pantalla , dimensiones etc
     final size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: size.height * 0.5,
       child: Swiper(
@@ -23,10 +23,8 @@ class CardSwiper extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: const FadeInImage(
-                
                 image: NetworkImage(
-                    'https://www.creativefabrica.com/wp-content/uploads/2021/06/12/mountain-landscape-illustration-design-b-Graphics-13326021-1.jpg'
-                ),
+                    'https://www.creativefabrica.com/wp-content/uploads/2021/06/12/mountain-landscape-illustration-design-b-Graphics-13326021-1.jpg'),
                 placeholder: AssetImage('assets/no-image.jpg'),
                 fit: BoxFit.cover,
               ),
